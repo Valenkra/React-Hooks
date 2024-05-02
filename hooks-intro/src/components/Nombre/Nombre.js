@@ -1,24 +1,22 @@
 import { useState } from "react";
 import './Nombre.css';
 
-export const Nombre = () => {
-
-    const [nombre, setNombre] = useState('');
+function Nombre() {
+    const [miNombre, setNombre] = useState('');
 
     const loguear = (e) => {
         setNombre(e.target.value);
     }
 
     return (
-        <>
-            <input type="text" onChange={loguear}>Cual es tu nombre</input>
-            <label> Buen día {nombre} </label>    
+        <div>
+            <input type="text" onChange={loguear} placeholder="Cual es tu nombre?"/>
             {
-                nombre.length ? <div>
-                    Buen dia {nombre}!!!
+                miNombre.length ? <div>
+                    Buen dia {miNombre}!!!
                 </div> : undefined
             }
-        </>
+        </div>
     );
 }
 export default Nombre;

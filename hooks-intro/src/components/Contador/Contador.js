@@ -3,19 +3,18 @@ import './Contador.css';
 
 export const Contador = () => 
 {
-    const [contador, setContador] = useState(0);
+    const [cont, setContador] = useState(0);
 
     const sumarUno = () => {
         //setContador(contador+1);
-        setContador((c) => c++);
+        setContador((c) => c + 1);
     };
-    
+
     return (
         <div>
             <button onClick={sumarUno}>Click me!</button>
-            <p>Hiciste click {contador} veces!!</p>
+            <p>Hiciste click {cont} veces!!</p>
         </div>
-
     );
 }
 
